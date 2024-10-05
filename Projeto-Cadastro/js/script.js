@@ -1,40 +1,40 @@
-function MouseHover() {
-    let btn = document.getElementById("bt-financas");
-    btn.innerHTML = "CONFIRA AGORA !";
+function MouseHover(e) {
+    e.innerHTML = "CONFIRA AGORA !";
 }
 
-function MouseOutHover() {
-    let btn = document.getElementById("bt-financas");
-    btn.innerHTML = "SAIBA MAIS";
+function MouseOutHover(e) {
+    e.innerHTML = "SAIBA MAIS";
+}
+
+id = setInterval(frame, 2000);
+
+function frame() {
+    let id = null;
+    const element = document.getElementById("img-anim");
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 1);
+
+    function frame() {
+        if (pos == 350) {
+            clearInterval(id);
+        } else {
+            pos++;
+            // element.style.top = pos + "px";
+            element.style.left = pos + "px";
+        }
+    }
+}
+
+function ReceivedCep(conteudo) {
+    let obj = JSON.parse(conteudo);
+    let t = obj.logradouro + " n°1240" + "/ Bairro - " + obj.bairro + "/ Cidade - " + obj.localidade + " - " + obj.uf;
+    document.getElementById("viewcep").innerHTML = t;
 }
 
 
-function MouseHover1() {
-    let btn = document.getElementById("bt-marketing");
-    btn.innerHTML = "CONFIRA AGORA !";
-}
-
-function MouseOutHover1() {
-    let btn = document.getElementById("bt-marketing");
-    btn.innerHTML = "SAIBA MAIS";
-}
-
-function MouseHover2() {
-    let btn = document.getElementById("bt-processos");
-    btn.innerHTML = "CONFIRA AGORA !";
-}
-
-function MouseOutHover2() {
-    let btn = document.getElementById("bt-processos");
-    btn.innerHTML = "SAIBA MAIS";
-}
-
-function MouseHover3() {
-    let btn = document.getElementById("bt-pessoas");
-    btn.innerHTML = "CONFIRA AGORA !";
-}
-
-function MouseOutHover3() {
-    let btn = document.getElementById("bt-pessoas");
-    btn.innerHTML = "SAIBA MAIS";
-}
+let cep = '01310930';
+const ajax = new XMLHttpRequest();
+ajax.open('get', 'https://viacep.com.br/ws/' + cep + '/json/');
+ajax.send();
+ajax.onload = () => ReceivedCep(ajax.responseText);

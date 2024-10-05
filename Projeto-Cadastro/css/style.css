@@ -80,16 +80,19 @@ body {
 }
 
 .nav-menu ul li {
-    color: white;
     margin: 0px 15px;
     padding: 10px;
     display: inline-block;
+}
+
+.nav-menu ul li a {
+    color: white;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
-.nav-menu ul li:hover {
+.nav-menu ul li a:hover {
     color: #ed931f;
 }
 
@@ -145,11 +148,14 @@ body {
 .img-foco-midde {
     display: flex;
     flex: 10%;
+    margin-top: 40px;
+    height: 600px;
     /* border: solid 2px black; */
 }
 
 .img-foco-midde img {
     width: 600px;
+    border-radius: 5px;
     box-shadow: 1px 1px 10px;
 }
 
@@ -157,7 +163,7 @@ body {
     display: flex;
     flex: 30%;
     position: relative;
-    float: left;
+    /* float: left; */
     margin-right: 10%;
     margin-top: 5%;
     flex-direction: column;
@@ -167,10 +173,10 @@ body {
 }
 
 .info-midde h2 {
-    margin-left: 50px;
-    margin-right: 50px;
-    text-align: left;
-    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    width: 80%;
     font-family: "Playball", cursive;
     font-weight: 400;
     font-style: normal;
@@ -188,6 +194,7 @@ body {
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
+    border-left: solid 3px #ed931f;
 }
 
 .section-bottom {
@@ -196,7 +203,7 @@ body {
     width: 80%;
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     /* border: solid 3px green; */
 }
 
@@ -276,4 +283,77 @@ body {
     padding-bottom: 20px;
     height: 60px;
     margin: 0px;
+}
+
+.anim-img {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-left: 10%;
+    text-align: center;
+    margin-bottom: 100px;
+    /* border: 1px solid #000; */
+}
+
+.anim-img img {
+    position: absolute;
+    bottom: 10px;
+    right: 25%;
+    width: 500px;
+    margin: 50px;
+}
+
+.footer {
+    background-image: linear-gradient(#ed931f, black);
+    height: 200px;
+    border-top: solid 5px #2e2c29;
+    text-align: center;
+    position: relative;
+}
+
+.footer p {
+    color: white;
+    font-family: "Playball", cursive;
+    font-weight: 400;
+    font-size: 45px;
+    margin: 20px;
+}
+
+#copyright {
+    position: absolute;
+    font-size: 20px;
+    bottom: 5px;
+    right: 38%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#viewcep {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.terms {
+    font-size: 15px;
+    color: green;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#whats {
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+}
+
+#whats img {
+    width: 50px;
+}
+
+#whats img:hover {
+    width: 55px;
+    opacity: 0.8;
 }
